@@ -1,0 +1,12 @@
+<view>
+    <text>请输入你的教工号</text>
+ </view>
+ <view class="page-cells page-cells_after-title">
+<view class="page-cell page-cell_input">
+    <input class="page-input"
+        placeholder="教工号"
+        bindfocus="onfocus" bindconfirm="onconfirm" />
+</view>
+<button type="default" size="default" bindtap="goToSuject"> 确认 </button>   
+</view>
+ 

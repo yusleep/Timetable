@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/log/log",
+    "pages/my/my",
+    "pages/subject/subject"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#328EEB",
+    "navigationBarTitleText": "我的课程表",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,5 @@
+<view class='container'>
+     <text class='intro'>请选择你的身份</text>
+    <button type="default" size="default" bindtap="goToStudent"> 学生 </button>   
+    <button type="default" size="default" bindtap="goToTeacher"> 老师</button>   
+</view>

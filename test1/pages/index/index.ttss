@@ -1,0 +1,10 @@
+/* pages/index/index.ttss */
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    }
+button{
+    width:600rpx;
+
+}
