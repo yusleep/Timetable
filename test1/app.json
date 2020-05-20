@@ -4,6 +4,7 @@
     "pages/log/log",
     "pages/my/my",
     "pages/subject/subject"
+    "pages/set/set"
   ],
   "window":{
     "backgroundTextStyle":"light",
