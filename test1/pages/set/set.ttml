@@ -1,0 +1,43 @@
+<view class="all">
+<view class='tianjia'>添加课程页面</view>
+  <view class='keming'>
+    <view class='btn'>课程名称 </view>
+    <view class='btn2'>
+      <input type='text ' bindinput="bindKeyInput" maxlength='10 ' placeholder="输入课程名称"/>
+    </view>
+</view>
+
+<view class='keaddr'>
+    <view class='btn'>上课地点</view>
+    <view class='btn2'>
+      <input type='text ' bindinput="bindKeyInput2" maxlength='20' placeholder="输入上课地点"/>
+    </view>
+</view>
+
+  <view class='kelength'>
+    <view class='btn'>上课节数</view>
+    <view class='btn2'>
+      <input type='number ' bindinput="bindKeyInput3" minlength='1' maxlength='1' placeholder="输入上课节数"/>
+    </view>
+  </view>
+
+  <view class='skzhoushu'>上课起止周数</view>
+
+  <view class='kezhoushu1'>
+    <view class='btn'>开始周数</view>
+    <view class='btn2'>
+      <input type='number ' bindinput="bindKeyInput4" minlength='1' maxlength='2' placeholder="输入开始周数"/>
+    </view>
+  </view>
+
+  <view class='kezhoushu2'>
+    <view class='btn'>结束周数</view>
+    <view class='btn2'>
+      <input type='number ' bindinput="bindKeyInput5" minlength='1' maxlength='2' placeholder="输入结束周数"/>
+    </view>
+  </view>
+
+  <view>
+    <button bindtap="save" form-type='submit'>保存</button>
+  </view>
+  </view>

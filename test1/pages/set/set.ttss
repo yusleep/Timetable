@@ -1,0 +1,9 @@
+.tianjia{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.all{
+  background-color: #d2e6b3;
+  color: #7cba23;
+}
