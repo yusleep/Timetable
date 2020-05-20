@@ -102,6 +102,17 @@ Page({
     ]
 
   },
+   showCardView: function (e) {
+    idx= e.currentTarget.dataset.index;
+    this.setData({
+     idx,
+    })
+    console.log(idx)
+    console.log(e.currentTarget.dataset.idx)
+     tt.navigateTo({
+      url: '/pages/set/set?idx=idx'
+    });
+  },
 
 
 
