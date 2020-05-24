@@ -1,5 +1,10 @@
+const LarkCloud = require('./libs/larkcloud-mp-alpha.min.js');
+const serviceId = 'af8581'; // 替换成你的 serviceId，可在后台「设置」页面获取
+// 初始化
+const larkcloud = new LarkCloud({ serviceId });
 Page({
   data: {
+    
     colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD"],
      wlist: [
 
@@ -96,148 +101,59 @@ Page({
       { "xqj": 7, "sksj": 11, "skcd": 1, "kcxx": "" },
       { "xqj": 7, "sksj": 12, "skcd": 1, "kcxx": "" },
       { "xqj": 7, "sksj": 13, "skcd": 1, "kcxx": "" },
-
-     
-
     ]
 
   },
-   showCardView: function (e) {
-    idx= e.currentTarget.dataset.index;
-    this.setData({
-     idx,
-    })
-    console.log(idx)
-    console.log(e.currentTarget.dataset.idx)
-     tt.navigateTo({
-      url: '/pages/set/set?idx=idx'
-    });
-  },
+
 
 
 
   /**
-
    * 页面的初始数据
-
    */
 
  
 
   /**
-
    * 生命周期函数--监听页面加载
-
    */
 
-  onLoad: function (options) {
 
-    var ukcxx = wx.getStorageSync('kcxx');
+onLoad: function () {
 
-    var skcd = wx.getStorageSync('skcd');
-
-    this.setData({ kcxx: kcxx });
-
-    this.setData({ skcd: skcd});
-
-  },
-
-
-
-  /**
-
-   * 生命周期函数--监听页面初次渲染完成
-
-   */
-
-  onReady: function () {
-
-
-
-  },
-
-
-
-  /**
-
-   * 生命周期函数--监听页面显示
-
-   */
-
-  onShow: function () {
-
+ var kcxx_;
+ larkcloud.run('class_xx').then(data => {
+  for(var i=0;i<91;i++){
+   kcxx_="wlist["+i+"].kcxx";
+    if(data.result[i].kcxx!=" "){
+    this.setData({    
+    
+     [kcxx_]:data.result[i].kcxx +'\n'+ data.result[i].didian +'\n'+ data.result[i].startzhou + "~" + data.result[i].endzhou + "周",
+   })
+    }
    
 
-  },
+   }
+  console.log('调用成功',data.result[0].kcxx +'\n'+ data.result[0].didian +'\n'+ data.result[0].startzhou + "~" + data.result[0].endzhou + "周");
+     
 
+ }); 
 
+},
 
-  /**
+showCardView: function (e) {
+var idx= e.currentTarget.dataset.index;
+this.setData({
+idx,
+})
+tt.setStorageSync('idxs', this.data.idx);
+console.log(idx)
+console.log(this.data.wlist[this.data.idx].kcxx)
+console.log(e.currentTarget.dataset.idx)
+tt.navigateTo({
+url: '/pages/set/set?idx=idx'
+});
+},
 
-   * 生命周期函数--监听页面隐藏
-
-   */
-
-  onHide: function () {
-
-
-
-  },
-
-
-
-  /**
-
-   * 生命周期函数--监听页面卸载
-
-   */
-
-  onUnload: function () {
-
-
-
-  },
-
-
-
-  /**
-
-   * 页面相关事件处理函数--监听用户下拉动作
-
-   */
-
-  onPullDownRefresh: function () {
-
-
-
-  },
-
-
-
-  /**
-
-   * 页面上拉触底事件的处理函数
-
-   */
-
-  onReachBottom: function () {
-
-
-
-  },
-
-
-
-  /**
-
-   * 用户点击右上角分享
-
-   */
-
-  onShareAppMessage: function () {
-
-
-
-  }
 
 })
