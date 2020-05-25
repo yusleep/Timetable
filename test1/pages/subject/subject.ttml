@@ -20,7 +20,7 @@
 
       <!-- xqj代表星期几上课，sksj是上课时间，skcd上课长度，kcxx课程信息-->
 
-        <view class="smalltext">{{item.kcxx}}</view>
+        <text class="smalltext">{{item.kcxx}}</text>
         
     </view>
 
