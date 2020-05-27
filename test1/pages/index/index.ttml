@@ -1,5 +1,5 @@
 <view class='container'>
-     <image src='/images/4.jpg' mode="scaleToFile" class="image1"/></image>
+     <image src='/images/6.jpg' mode="scaleToFile" class="image1"/></image>
      <text class='intro'>请选择你的身份</text>
      <button type="default" size="default" bindtap="goToStudent"> 学生 </button>   
      <button type="default" size="default" bindtap="goToTeacher"> 老师</button>   
