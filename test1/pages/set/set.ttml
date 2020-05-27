@@ -1,4 +1,5 @@
 <view class="all">
+ <image src='/images/6.jpg' mode="widthFix" class="image1"/></image>
 <view class='tianjia'>添加课程页面</view>
   <view class='keming'>
     <view class='btn'>课程名称 </view>
@@ -38,6 +39,6 @@
   </view>
 
   <view>
-    <button bindtap="save" form-type='submit'>保存</button>
+    <button bindtap="save" form-type='submit' class='button1'>保存</button>
   </view>
   </view>
