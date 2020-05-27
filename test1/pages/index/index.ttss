@@ -30,6 +30,6 @@
 .intro{
 font-size: 20px;
 font-family:"宋体";  
-color:rgb(95, 213, 243); 
+color:rgb(243, 167, 95); 
 margin-top: 300rpx;
 }
