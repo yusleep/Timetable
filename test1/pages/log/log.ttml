@@ -1,20 +1,26 @@
-<view>
-  <text>请输入你的学号</text>
-</view>
-<view class="page-cells page-cells_after-title">
-<view class="page-cell page-cell_input">
+<view class="container"> 
+<image src='/images/6.jpg' mode="widthFix" class="image1"/></image>
+<text class='intro'>请选择您的身份</text>
+
+<view class="input">
+    <view class="left">学号</view>
     <input class="page-input"
-        placeholder="学号"
-        bindinput="listenerid"
-        bindfocus="onfocus" bindconfirm="onconfirm" />
-</view>
-<view class="page-cell page-cell_input">
-    <input class="page-input"
-        placeholder="姓名"
-        bindinput="listenername"
-        bindfocus="onfocus" bindconfirm="onconfirm" />
+
+        placeholder="请输入学号"
+
+        bindinput="listenerid" />
+
 </view>
 
-<view>
-<button type="default" size="default" bindtap="ke"> 确认 </button>   
+<view class="input">
+  <view class="left">姓名</view>
+    <input class="page-input"
+
+        placeholder="请输入姓名"
+
+        bindinput="listenername"/>
+
 </view>
+
+<button type="default" size="default" bindtap="ke" class="button1"> 确认 </button>   
+ </view>
